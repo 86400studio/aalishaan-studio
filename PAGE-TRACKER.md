@@ -10,6 +10,7 @@ Last updated: 2026-09-14
 
 - Verified the complete rebuilt website against the frozen E1 source hashes. Static export passed 797 files and 7,497 references; Admin passed 13 guard groups; handoff passed 793 files and 44 document links; routes passed 60 pages and 66 aliases.
 - Destination repository is empty. Initial source publication targets main; dependencies, exports, archives and browser evidence remain excluded by .gitignore.
+- Push attempt returned HTTP 403: GitHub authenticated as 86400websites, which lacks write permission to 86400studio/aalishaan-studio. Source is committed locally; nothing was pushed. Resume by authenticating an account with repository write access, then push main and verify the remote commit.
 - E2 records publication documentation only in README and this tracker; website, assets and Admin remain equivalent to E1 after text line-ending normalisation. The checksum reference is refreshed for these documented changes before committing.
 - Approval scope: owner's explicit request accepts E1/A1 for GitHub prototype publication on 2026-09-14, not live sales. Next action: push main and verify the remote commit; Pages hosting requires GitHub Actions as its source.
 
