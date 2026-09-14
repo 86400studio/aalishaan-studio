@@ -979,7 +979,7 @@ main [id],section[id]{scroll-margin-top:6.5rem}
   var flyer = $('[data-travelling-art]'), hero = $('.opening'), details = $('.anatomy');
   var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   var desktop = window.matchMedia('(min-width: 901px) and (min-height: 680px)');
-  var geometry = null, scheduled = false, imagesReady = false;
+  var geometry = null, scheduled = false, imagesReady = false, mobileLanded = false;
   var progressRange = function (p,a,b) { return clamp((p-a)/(b-a),0,1); };
   var smooth = function (t) { return t*t*(3-2*t); };
   var figure = $('.anatomy__figure'), specs = $$('.spec',figure);
@@ -1014,6 +1014,11 @@ main [id],section[id]{scroll-margin-top:6.5rem}
     });
   }
   function measureJourney() {
+    // Reserve the actual copy height, including wrapped buttons and enlarged text.
+    if(innerWidth<=900){
+      var available=innerHeight-76-$('.hero-copy').getBoundingClientRect().height-24;
+      hero.style.setProperty('--mobile-room-height',Math.max(180,Math.min(innerWidth*1.04,available))+'px');
+    }else hero.style.removeProperty('--mobile-room-height');
     var enabled = imagesReady && (desktop.matches || innerWidth<=900) && !motion.matches;
     var mobile = enabled && !desktop.matches;
     document.documentElement.dataset.handoff = enabled ? (mobile?'mobile':'on') : 'off';
@@ -1022,6 +1027,7 @@ main [id],section[id]{scroll-margin-top:6.5rem}
     document.documentElement.style.removeProperty('--mobile-labels');
     document.documentElement.style.removeProperty('--mobile-truth');
     flyer.style.removeProperty('visibility');
+    flyer.style.removeProperty('opacity');
     geometry = null;
     if (!enabled) {
       hero.inert = false; details.inert = false;
@@ -1035,9 +1041,14 @@ main [id],section[id]{scroll-margin-top:6.5rem}
       hero.removeAttribute('aria-hidden');details.removeAttribute('aria-hidden');
       stage.removeAttribute('style');
       var mw=wall.getBoundingClientRect(), md=$('.framed-art',destination).getBoundingClientRect();
-      var mobileStart=Math.max(1,$('.hero-panel').getBoundingClientRect().bottom+scrollY-80);
+      var safeTop=$('.site-header').getBoundingClientRect().bottom+24;
+      var landingTop=Math.max(safeTop+48,(innerHeight-md.height)/2);
+      var mobileEnd=md.top+scrollY-landingTop;
+      var mobileStart=Math.max(1,Math.min($('.hero-panel').getBoundingClientRect().bottom+scrollY-safeTop,mobileEnd-240));
       geometry={mobile:true,x:mw.left,y:mw.top+scrollY,w:mw.width,dx:md.left,dy:md.top+scrollY,scale:md.width/mw.width,
-        start:mobileStart,end:Math.max(mobileStart+400,md.top+scrollY-innerHeight*.35)};
+        start:mobileStart,end:mobileEnd,safeTop:safeTop,reset:Math.max(0,mw.bottom+scrollY-safeTop)};
+      sequence.dataset.mobileStart=String(mobileStart);
+      sequence.dataset.mobileEnd=String(mobileEnd);
       flyer.style.width=geometry.w+'px';
       drawJourney();measureConnectors();return;
     }
@@ -1055,16 +1066,21 @@ main [id],section[id]{scroll-margin-top:6.5rem}
     scheduled = false; stuck();
     if (!geometry) return;
     if(geometry.mobile){
+      // Once it arrives, ordinary reverse scrolling must keep the real artwork
+      // in section 2. Replay only after the original hero artwork returns.
+      if(scrollY<=geometry.reset)mobileLanded=false;
+      if(scrollY>=geometry.end)mobileLanded=true;
       var mp=progressRange(scrollY,geometry.start,geometry.end);
-      var active=scrollY>=geometry.start && scrollY<geometry.end;
+      var active=!mobileLanded && scrollY>geometry.start && scrollY<geometry.end;
       var mx=geometry.x+(geometry.dx-geometry.x)*smooth(mp);
-      var my=geometry.y+(geometry.dy-geometry.y)*mp-scrollY;
+      var my=geometry.safeTop+(geometry.dy-geometry.end-geometry.safeTop)*smooth(mp);
       var ms=1+(geometry.scale-1)*smooth(mp);
       flyer.style.transform='translate3d('+mx+'px,'+my+'px,0) scale('+ms+')';
+      flyer.style.opacity=String(smooth(progressRange(mp,0,.2)));
       document.documentElement.dataset.flying=String(active);
-      document.documentElement.style.setProperty('--landed',mp>=1?'visible':'hidden');
-      document.documentElement.style.setProperty('--mobile-labels',smooth(progressRange(mp,.9,1)));
-      document.documentElement.style.setProperty('--mobile-truth',1-smooth(progressRange(mp,0,.22)));
+      document.documentElement.style.setProperty('--landed',mobileLanded?'visible':'hidden');
+      document.documentElement.style.setProperty('--mobile-labels',mobileLanded?1:smooth(progressRange(mp,.9,1)));
+      document.documentElement.style.setProperty('--mobile-truth',active?1-smooth(progressRange(mp,0,.2)):1);
       return;
     }
     var p = clamp(-sequence.getBoundingClientRect().top / (sequence.offsetHeight-stage.offsetHeight),0,1);

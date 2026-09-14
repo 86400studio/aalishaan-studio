@@ -1,8 +1,12 @@
 # Page revision and sign-off tracker
 
-Last updated: 2026-09-14
+Last updated: 2026-09-15
 
 ## Resume here
+
+**E5 / M3 corrections, 2026-09-15:** owner requested collection back navigation above the image, tighter mobile Home fitting artwork/text/buttons in the first screen, a fully visible section 2 artwork with stable reverse scrolling, and removal of the decorative footer image strip. Implementation and merge/Pages publication are explicitly authorised. Mobile animation now uses a viewport-safe landing and retains the landed artwork until the hero returns. Review complete: Home passed nine viewports, landings, resize, reverse scroll, reduced motion and no-JavaScript. The dedicated M3 regression passed hero/button fit on six portrait sizes (including 320?568), bounded artwork motion and stable landing/replay at seven sizes including landscape, and back-button/image/text order on all three collection details. All 58 public pages passed 320/390/430 layouts and mobile/landscape interactions. Footer strip removal was checked and screenshots reviewed at 390/1440. Build, routes, artwork mappings, static export, Admin guards and source handoff pass. Existing text and buttons remain readable through natural scrolling on short landscape screens or unusually enlarged text. Next: freeze E5, merge mobile-hero-handoff into main, publish and verify the live revision.
+
+**Explicit approval, 2026-09-15:** E4/M2 mobile navigation (item 2) and Saved artworks placement (item 4) are SIGNED OFF for those features: owner said ?2 and 4 are sorted?. Guest checkout without customer accounts is agreed for V1 (item 5). The mobile Home appearance was praised, with first-screen fit and animation corrections requested; this is not a sign-off of the remaining Home work.
 
 **E4 / M2 mobile revisions, 2026-09-14:** the owner requested artwork before text on mobile Home and collection detail pages; menu left, logo centred, cart right, with Track order retained inside Menu; and moving Saved artworks out of filters. Implemented these changes, with saved-artwork entry points in Menu and the cart drawer on every public page. Saved items remain browser-local; filtering and clearing filters stay within the saved view, with an explicit Explore all artworks link. The Home mobile artwork animation begins after the text clears to preserve readability. Desktop Home composition is retained.
 

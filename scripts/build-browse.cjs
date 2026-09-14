@@ -63,7 +63,7 @@ const backLink=(href,label)=>`<a class="back-link" href="${href}"><span aria-hid
 // Hero variants: 'image' blends the picture into a dark full-bleed band (Shop, Art Styles, style pages);
 // 'detail' keeps the white hero with the collage cover beside the copy (collection pages).
 function hero({eyebrow,title,intro,image,variant='image',back='',modifier=''}){
- if(variant==='detail')return `<section class="browse-hero browse-hero--detail"><div class="container browse-hero__inner"><div>${back}${eyebrow?`<span class="eyebrow">${esc(eyebrow)}</span>`:""}<h1>${esc(title)}</h1><p>${esc(intro)}</p></div><img src="${image}" alt="${esc(title)} collection cover" width="700" height="700" fetchpriority="high"></div></section>`;
+ if(variant==='detail')return `<section class="browse-hero browse-hero--detail"><div class="container browse-hero__inner"><div class="browse-detail-copy">${back}<div class="browse-detail-text">${eyebrow?`<span class="eyebrow">${esc(eyebrow)}</span>`:""}<h1>${esc(title)}</h1><p>${esc(intro)}</p></div></div><img src="${image}" alt="${esc(title)} collection cover" width="700" height="700" fetchpriority="high"></div></section>`;
  return `<section class="browse-hero ${modifier}" data-browse-image="${image}" data-browse-mobile-image="${image.replace('-1600.webp','-600.webp')}"><div class="container browse-hero__inner"><div>${back}${eyebrow?`<span class="eyebrow">${esc(eyebrow)}</span>`:""}<h1>${esc(title)}</h1><p>${esc(intro)}</p></div></div></section>`;
 }
 const truthLine="";
