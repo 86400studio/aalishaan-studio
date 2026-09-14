@@ -39,5 +39,33 @@ body{--ivory:#fff;--white:#fff;background:#fff}
  .hero-truth{position:relative;left:auto;bottom:auto;transform:none;margin-inline:auto;color:var(--ink)}
  .hero-truth li>span>span{color:var(--ink-soft)}
  .anatomy__art{width:min(100%,19rem,calc((100svh - 210px) * .7586))}
- [data-handoff="mobile"] .anatomy__head{opacity:var(--mobile-labels,1)}
+}
+
+/* M4: a continuous wall-to-materials lift, followed by natural scrolling. */
+.mobile-materials[hidden]{display:none}
+@media(max-width:900px){
+ [data-handoff="mobile"] .opening-sequence{height:200svh}
+ [data-handoff="mobile"] .opening-stage{position:sticky;top:0;height:100svh;isolation:isolate;overflow:clip;background:#fff}
+ [data-handoff="mobile"] .opening{position:absolute;inset:0;height:100%;padding-bottom:0;opacity:var(--room-opacity,1)}
+ [data-handoff="mobile"] .hero-panel{opacity:var(--copy-opacity,1)}
+ [data-handoff="mobile"] .hero-scene__frame{visibility:hidden}
+ [data-handoff="mobile"] .anatomy{position:absolute;inset:0;padding:100px 0 24px;opacity:var(--details-opacity,0);background:transparent}
+ [data-handoff="mobile"] .anatomy__head{margin-bottom:24px;opacity:1}
+ [data-handoff="mobile"] .anatomy__figure{display:block}
+ [data-handoff="mobile"] .anatomy__art{width:min(100%,19rem,calc((100svh - 260px) * .7586));margin:0 auto}
+ [data-handoff="mobile"] .travelling-art{position:absolute;z-index:4;visibility:visible;filter:drop-shadow(0 10px 16px #19181326)}
+ .anatomy__connectors{display:none}
+ .spec__title[data-number]::before{content:none}
+ .mobile-materials{padding:16px 0 56px;background:#fff}
+ .mobile-materials .hero-truth{width:100%;max-width:none;margin:0 0 40px;padding:24px 0;border-block:1px solid var(--line-soft);gap:18px;opacity:1}
+ .mobile-material-details{display:grid;gap:16px}
+ .mobile-material-details h2{font-size:2rem;margin:0 0 8px}
+ .mobile-material-details .anatomy__col{display:contents}
+ .mobile-material-details .spec{display:grid;grid-template-columns:96px minmax(0,1fr);gap:0;overflow:hidden;border:1px solid var(--line-soft);border-radius:4px;background:var(--ivory);align-items:stretch}
+ .mobile-material-details .spec__swatch{width:100%;height:100%;min-height:112px;border-radius:0;background:#fff}
+ .mobile-material-details .spec__swatch img{width:100%;height:100%;object-fit:cover}
+ .mobile-material-details .spec__swatch--size img{object-fit:contain}
+ .mobile-material-details .spec>span:last-child{padding:14px;align-self:center}
+ .mobile-material-details .spec__title{font-size:1.1rem;line-height:1.2}
+ .mobile-material-details .spec__line{font-size:14px;line-height:1.65}
 }
