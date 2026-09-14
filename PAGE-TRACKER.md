@@ -8,6 +8,8 @@ Last updated: 2026-09-14
 
 **E3 publication records:** updates only README and this tracker, with refreshed source checksums; the E1 website and Admin remain unchanged. Deployment evidence will be checked against the pushed main commit. Existing commercial-input requirements remain in force.
 
+**Publication completed, 2026-09-14:** GitHub Actions run https://github.com/86400studio/aalishaan-studio/actions/runs/34834699524 successfully built and deployed source commit 0a28ed98ad2b868cc08130bb7a869057971f25c6. Remote main matched that commit. Live HTTPS checks returned 200 for Home, shop, product, checkout, Admin and the shop alias, plus the expected 404 for a missing nested route; all retain noindex. The live Chrome network-idle check timed out and a follow-up image decode did not finish, so full live-browser verification is not claimed. Prior local browser evidence and all GitHub build checks remain passed. This final documentation-only record refreshes E3 checksums and skips CI; deployed website files are unchanged. Next: use the published prototype for review/development and resolve the retained business inputs before live sales.
+
 **GitHub publication authorised, 2026-09-14:** the owner requested pushing the "final approved version" to https://github.com/86400studio/aalishaan-studio.git. E1/A1 is accepted for prototype source publication. This supersedes the pending acceptance wording below for that scope; live-service acceptance and outstanding commercial inputs remain separate.
 
 ## Latest session: GitHub publication preparation, 2026-09-14
