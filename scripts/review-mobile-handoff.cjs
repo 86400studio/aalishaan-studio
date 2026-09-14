@@ -19,6 +19,8 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
    const initialDelta=await page.evaluate(()=>{const a=document.querySelector('[data-travelling-art]').getBoundingClientRect(),b=document.querySelector('[data-wall-frame]').getBoundingClientRect();return Math.max(Math.abs(a.x-b.x),Math.abs(a.y-b.y),Math.abs(a.width-b.width));});assert(initialDelta<1,'Lift must start at the original wall frame');
    assert.equal(await page.locator('.anatomy__connectors').evaluate(e=>getComputedStyle(e).display),'none');
    assert.equal(await page.locator('.mobile-materials .hero-truth li').count(),3);
+   assert(await page.locator('.mobile-materials .hero-truth').isHidden());
+   assert.equal(await page.locator('.mobile-material-details h2').count(),0);
    assert.equal(await page.locator('.mobile-material-details .spec').count(),6);
    const {start,end}=await page.locator('[data-sequence]').evaluate(e=>({start:Number(e.dataset.mobileStart),end:Number(e.dataset.mobileEnd)}));
    assert(end>start);
