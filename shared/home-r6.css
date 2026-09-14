@@ -25,4 +25,14 @@ body{--ivory:#fff;--white:#fff;background:#fff}
  .opening::after{inset:72% 0 0;background:linear-gradient(transparent,rgba(35,35,32,.76) 28%,rgba(35,35,32,.86))}
  .anatomy__art{max-width:19rem}
 }
-@media(max-width:360px){.hero-scene{top:340px}.opening{min-height:calc(360px + 104vw + 160px)}}
+/* M2: keep the supplied room above the copy, with promises below both. */
+@media(max-width:900px){
+ .opening{min-height:0;height:auto;padding-bottom:2rem}
+ .hero-scene{top:76px}
+ .hero-scene::after{height:4rem}
+ .hero-panel{padding-top:calc(76px + 104vw);padding-bottom:2rem}
+ .hero-copy{margin-inline:auto}
+ .opening::after{display:none}
+ .hero-truth{position:relative;left:auto;bottom:auto;transform:none;margin-inline:auto;color:var(--ink)}
+ .hero-truth li>span>span{color:var(--ink-soft)}
+}
