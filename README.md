@@ -39,7 +39,7 @@ The hosting export is **dist/site/**, with static aliases and a custom 404. Sour
 2. In repository Settings > Pages, choose **GitHub Actions** as the source.
 3. Push to main, or manually run **Publish prototype to GitHub Pages**.
 
-The source repository is [86400studio/aalishaan-studio](https://github.com/86400studio/aalishaan-studio), with `main` as the publication branch. The owner authorised publication on 14 September 2026. E2 updates the publication records and checksums; the website remains the reviewed E1 reference. For a fresh checkout:
+The source repository is [86400studio/aalishaan-studio](https://github.com/86400studio/aalishaan-studio), with `main` as the publication branch. The owner authorised publication and Pages hosting on 14 September 2026. GitHub Pages is configured to use GitHub Actions at [the prototype site](https://86400studio.github.io/aalishaan-studio/). E3 updates the publication records and checksums; the website remains the reviewed E1 reference. For a fresh checkout:
 
 ~~~sh
 git clone https://github.com/86400studio/aalishaan-studio.git
@@ -49,7 +49,7 @@ npm start
 
 The workflow builds and validates the export, Admin model, source hashes and handoff before deployment. Repository Pages metadata configures the base path for both root sites and project sites such as username.github.io/repository/. Links/redirects preserve that path; the custom 404 recovers into the same project.
 
-All exported HTML includes a noindex directive for this review prototype. This is not access control: hosted Admin screens are publicly viewable fictional demonstrations. Use sample data only. No site has been published by this review.
+All exported HTML includes a noindex directive for this review prototype. This is not access control: hosted Admin screens are publicly viewable fictional demonstrations. Use sample data only. The Actions workflow builds, checks and deploys the prototype on pushes to main.
 
 For another static host, upload the contents of dist/site after build:site. For subfolder hosting set PAGES_BASE_PATH to that path before exporting, for example /studio.
 

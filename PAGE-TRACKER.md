@@ -4,6 +4,10 @@ Last updated: 2026-09-14
 
 ## Resume here
 
+**GitHub Pages publication, 2026-09-14:** the owner explicitly requested both upload and GitHub Pages hosting and completed device authorization for 86400studio. GitHub API confirms that identity. Source was successfully pushed to main, including initial prototype commit 1c2b110. Pages is enabled with GitHub Actions and HTTPS at https://86400studio.github.io/aalishaan-studio/. The repository now selects 86400studio for future Git authentication. Next: push these publication records and verify the resulting deployment and live routes; the earlier authentication blocker is resolved.
+
+**E3 publication records:** updates only README and this tracker, with refreshed source checksums; the E1 website and Admin remain unchanged. Deployment evidence will be checked against the pushed main commit. Existing commercial-input requirements remain in force.
+
 **GitHub publication authorised, 2026-09-14:** the owner requested pushing the "final approved version" to https://github.com/86400studio/aalishaan-studio.git. E1/A1 is accepted for prototype source publication. This supersedes the pending acceptance wording below for that scope; live-service acceptance and outstanding commercial inputs remain separate.
 
 ## Latest session: GitHub publication preparation, 2026-09-14
