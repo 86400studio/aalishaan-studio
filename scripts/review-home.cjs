@@ -27,7 +27,8 @@ const out='preview/home';
    await page.screenshot({path:`${out}/hero-${width}.png`});
    const positions=await page.evaluate(()=>{
     const s=document.querySelector('[data-sequence]'),t=document.querySelector('[data-stage]'),w=document.querySelector('[data-wall-frame]').getBoundingClientRect(),d=document.querySelector('[data-art-slot]').getBoundingClientRect();
-    return document.documentElement.dataset.handoff==='mobile'?{start:Math.max(0,w.top+scrollY-innerHeight*.28),end:d.top+scrollY-innerHeight*.35}:{start:0,end:s.offsetHeight-t.offsetHeight};
+    const mobileStart=Math.max(1,document.querySelector('.hero-panel').getBoundingClientRect().bottom+scrollY-80);
+    return document.documentElement.dataset.handoff==='mobile'?{start:mobileStart,end:Math.max(mobileStart+400,d.top+scrollY-innerHeight*.35)}:{start:0,end:s.offsetHeight-t.offsetHeight};
    });
    for(const progress of [.12,.5,.999,1.002]){
     await page.evaluate(y=>scrollTo(0,y),positions.start+(positions.end-positions.start)*progress);await page.waitForTimeout(100);
@@ -72,7 +73,7 @@ const out='preview/home';
   // Responsive remeasurement in the middle of the handoff.
   await page.evaluate(()=>scrollTo(0,450));await page.waitForTimeout(100);
   await page.setViewportSize({width:430,height:800});await page.waitForTimeout(100);
-  await page.evaluate(()=>{const d=document.querySelector('[data-art-slot]').getBoundingClientRect();scrollTo(0,d.top+scrollY-innerHeight*.35+1);});await page.waitForTimeout(100);
+  await page.evaluate(()=>{const d=document.querySelector('[data-art-slot]').getBoundingClientRect();const start=Math.max(1,document.querySelector('.hero-panel').getBoundingClientRect().bottom+scrollY-80);scrollTo(0,Math.max(start+400,d.top+scrollY-innerHeight*.35)+1);});await page.waitForTimeout(100);
   assert.equal(await page.locator('html').getAttribute('data-flying'),'false');
   await page.emulateMedia({reducedMotion:'reduce'});await load();
   assert.equal(await page.locator('html').getAttribute('data-handoff'),'off');

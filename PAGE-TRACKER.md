@@ -4,6 +4,12 @@ Last updated: 2026-09-14
 
 ## Resume here
 
+**E4 / M2 mobile revisions, 2026-09-14:** the owner requested artwork before text on mobile Home and collection detail pages; menu left, logo centred, cart right, with Track order retained inside Menu; and moving Saved artworks out of filters. Implemented these changes, with saved-artwork entry points in Menu and the cart drawer on every public page. Saved items remain browser-local; filtering and clearing filters stay within the saved view, with an explicit Explore all artworks link. The Home mobile artwork animation begins after the text clears to preserve readability. Desktop Home composition is retained.
+
+The owner explicitly authorised merging and publishing this revision to the existing GitHub Pages prototype. This is implementation/publication authorisation, not a new visual sign-off or live-sales acceptance. Customer accounts were requested as advice only: recommend guest checkout for V1, with optional accounts later for cross-device saved items and order history. No account functionality was added.
+
+Checks completed: commerce at 390/1440 including eight integrity groups; all 58 public pages at 320/390/430 and mobile interactions/landscape; 60 routes and 66 aliases; 797 exported files and 7,632 references; 13 Admin guard groups and handoff links. Home passed nine viewports including mobile/desktop landings, resize, reduced motion and no-JavaScript; targeted M2 checks passed five widths for header placement, artwork order on all three collections and menu/cart saved entry. Screenshots reviewed. Next: freeze E4, merge mobile-artwork-first into main and verify the Pages deployment.
+
 **GitHub Pages publication, 2026-09-14:** the owner explicitly requested both upload and GitHub Pages hosting and completed device authorization for 86400studio. GitHub API confirms that identity. Source was successfully pushed to main, including initial prototype commit 1c2b110. Pages is enabled with GitHub Actions and HTTPS at https://86400studio.github.io/aalishaan-studio/. The repository now selects 86400studio for future Git authentication. Next: push these publication records and verify the resulting deployment and live routes; the earlier authentication blocker is resolved.
 
 **E3 publication records:** updates only README and this tracker, with refreshed source checksums; the E1 website and Admin remain unchanged. Deployment evidence will be checked against the pushed main commit. Existing commercial-input requirements remain in force.

@@ -1,6 +1,6 @@
 # Aalishaan Studio prototype
 
-**E1 development reference:** the public R13 design with M1 mobile refinements and connected Admin A1. [The development handoff](docs/DEVELOPMENT-HANDOFF.md) records the independent review, fixes, validation and remaining owner decisions. [PAGE-TRACKER.md](PAGE-TRACKER.md) records approval separately from technical checks. Payments, tracking, messages and Admin provider actions are demonstrations.
+**E4 development reference:** the public R13 design with M2 mobile artwork-first layouts, centred mobile navigation, saved artworks accessible from the menu/cart, and connected Admin A1. [The development handoff](docs/DEVELOPMENT-HANDOFF.md) records the independent review, fixes, validation and remaining owner decisions. [PAGE-TRACKER.md](PAGE-TRACKER.md) records approval separately from technical checks. Payments, tracking, messages and Admin provider actions are demonstrations.
 
 ## Start here
 
@@ -39,7 +39,7 @@ The hosting export is **dist/site/**, with static aliases and a custom 404. Sour
 2. In repository Settings > Pages, choose **GitHub Actions** as the source.
 3. Push to main, or manually run **Publish prototype to GitHub Pages**.
 
-The source repository is [86400studio/aalishaan-studio](https://github.com/86400studio/aalishaan-studio), with `main` as the publication branch. The owner authorised publication and Pages hosting on 14 September 2026. GitHub Pages is configured to use GitHub Actions at [the prototype site](https://86400studio.github.io/aalishaan-studio/). E3 updates the publication records and checksums; the website remains the reviewed E1 reference. For a fresh checkout:
+The source repository is [86400studio/aalishaan-studio](https://github.com/86400studio/aalishaan-studio), with `main` as the publication branch. The owner authorised publication and Pages hosting on 14 September 2026. GitHub Pages is configured to use GitHub Actions at [the prototype site](https://86400studio.github.io/aalishaan-studio/). E4 incorporates the owner-requested mobile and saved-artwork revisions. Guest checkout remains the V1 recommendation; customer accounts have not been added. For a fresh checkout:
 
 ~~~sh
 git clone https://github.com/86400studio/aalishaan-studio.git

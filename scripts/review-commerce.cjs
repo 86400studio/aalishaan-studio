@@ -43,8 +43,8 @@ async function checkPublicIntegrity({page,browser,base,out,go,results}){
  const slug=await page.locator('.art-card').first().getAttribute('data-product');await page.locator('[data-wishlist]').first().click();
  await go('shop-all/index.html?saved=1');assert.equal(await page.locator('.catalogue-grid .art-card:visible').count(),1);assert.equal(await page.locator('.catalogue-grid .art-card:visible').getAttribute('data-product'),slug);
  await page.setViewportSize({width:390,height:900});await page.screenshot({path:out+'/saved-artworks-390.png',fullPage:true});
- await page.locator('.catalogue-grid .art-card:visible [data-wishlist]').click();assert(await page.locator('.empty-results').isVisible());assert(await page.locator('[data-saved-toggle]').evaluate(el=>el===document.activeElement));
- await page.locator('[data-reset-filters]').click();await page.waitForFunction(()=>document.querySelectorAll('.catalogue-grid .art-card:not([hidden])').length===22);
+ await page.locator('.catalogue-grid .art-card:visible [data-wishlist]').click();assert(await page.locator('.empty-results').isVisible());assert(await page.locator('[data-catalogue-title]').evaluate(el=>el===document.activeElement));
+ await page.locator('[data-reset-filters]').click();assert(await page.locator('.empty-results').isVisible());await page.locator('[data-saved-note] a').click();await page.waitForFunction(()=>document.querySelectorAll('.catalogue-grid .art-card:not([hidden])').length===22);
  results.push('Wishlist retrieval, removal, empty recovery and mobile layout');
 
  // Clearing public selections must leave independent Admin records and unrelated browser keys intact.
