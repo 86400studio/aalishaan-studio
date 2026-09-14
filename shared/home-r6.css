@@ -1,0 +1,28 @@
+/* Supplied R6 room and portrait artwork. Loaded only by Home. */
+body{--ivory:#fff;--white:#fff;background:#fff}
+.opening{background:#f2f1ee}
+.hero-scene,.hero-scene picture{aspect-ratio:1672/941}
+.hero-scene picture{mask-image:none}
+.hero-scene::before,[data-handoff="on"] .hero-scene::before{height:76%;background-image:url('../assets/site/responsive/page-hero-1600.webp');background-position:0 30%;background-size:600% 180%}
+.hero-scene::after{background:linear-gradient(transparent,#f2f1ee 4rem)}
+.hero-scene__frame{left:52.885%;top:12.5%;width:26.73%;height:auto;aspect-ratio:880/1160}
+.framed-art,.hero-scene__frame .framed-art{aspect-ratio:880/1160;height:auto}
+.framed-art__cutout{width:136.364%;left:-18.18%;top:-3.45%;height:auto}
+.anatomy__art{max-width:19rem;margin-inline:auto}
+.opening::after{background:linear-gradient(transparent,rgba(35,35,32,.65));inset:76% 0 0}
+@media(min-width:901px){
+ .hero-scene{width:min(92vw,calc((100svh - 112px)*1.777));top:calc(50% + 48px);mask-image:linear-gradient(to bottom,transparent,#000 6%,#000 96%,transparent),linear-gradient(to right,transparent,#000 4%,#000 96%,transparent);mask-composite:intersect}
+ .hero-copy{margin-left:clamp(20px,3vw,52px);max-width:36%}
+ .opening{background:#f2f1ee}
+}
+@media(max-width:900px){
+ .opening{height:auto;min-height:calc(330px + 104vw + 160px)}
+ .hero-scene{top:310px;left:-75%;width:185%;aspect-ratio:1672/941;transform:none}
+ .hero-scene__frame{left:52.885%;top:12.5%;width:26.73%;height:auto;aspect-ratio:880/1160}
+ .hero-scene::before{height:76%;background-image:url('../assets/site/responsive/page-hero-1200.webp');background-position:0 30%;background-size:600% 180%}
+ .hero-scene::after{height:180px}
+ .hero-panel{padding-top:6.6rem}
+ .opening::after{inset:72% 0 0;background:linear-gradient(transparent,rgba(35,35,32,.76) 28%,rgba(35,35,32,.86))}
+ .anatomy__art{max-width:19rem}
+}
+@media(max-width:360px){.hero-scene{top:340px}.opening{min-height:calc(360px + 104vw + 160px)}}

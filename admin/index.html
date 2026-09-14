@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Studio Admin | Aalishaan Studio</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#orders">Aalishaan<span>STUDIO WORKSPACE</span></a>
+    <p class="nav-label">YOUR STUDIO</p>
+    <nav id="navigation" aria-label="Main menu"></nav>
+    <nav id="settings-navigation" aria-label="Settings"></nav>
+    <div class="sidebar-bottom"><span class="studio-dot"></span><span>A little care. Every order.<small>Admin prototype · A1</small></span></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <button id="menu-toggle" class="icon-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="sidebar">☰</button>
+      <form id="global-search" role="search"><label class="sr-only" for="record-search">Search all records</label><input id="record-search" name="q" type="search" placeholder="Find an order, customer, artwork or reference…" autocomplete="off"><button class="search-button" aria-label="Search records">⌕</button></form>
+      <a class="review-link" href="#settings/journeys">Review journeys ↗</a>
+      <label class="role-control"><span class="sr-only">Preview role</span><select id="role-select"><option value="owner">Khalid · Owner</option><option value="operations">Asha · Operations</option><option value="support">Rahul · Support</option></select></label>
+    </header>
+    <div class="demo-bar"><span><strong>PROTOTYPE A1</strong> Fictional records. Changes stay in this browser. Provider actions are simulated.</span><button data-action="reset" class="text-button">Reset demo</button></div>
+    <main id="main" tabindex="-1"></main>
+    <footer>Made with care, managed with clarity.<span><a href="wireframe/index.html">W1 reference</a> · <a href="../docs/ADMIN-FINAL-FEATURES.md">Approved features</a> · <a href="../site-map.html">Page directory</a></span></footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="action-dialog" aria-labelledby="dialog-title"></dialog>
+  <noscript>This prototype needs JavaScript. <a href="../docs/ADMIN-FINAL-FEATURES.md">Read the approved scope.</a></noscript>
+  <script src="catalogue.js"></script>
+  <script src="wireframe/scope.js"></script>
+  <script src="state.js"></script>
+  <script src="app.js"></script>
+  <script src="orders.js"></script>
+  <script src="records.js"></script>
+  <script src="products.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>
