@@ -19,7 +19,7 @@ const out='preview/home';
   for(const [width,height] of [[320,740],[375,667],[390,844],[430,932],[768,1024],[1024,768],[1440,900],[1920,1080],[844,390]]){
    await page.setViewportSize({width,height});await load();
    const mode=await page.locator('html').getAttribute('data-handoff');
-   assert.equal(mode,width<=900?'mobile':'on');
+   assert.equal(mode,width<=900?(height>=520?'mobile':'off'):'on');
    assert(await page.evaluate(()=>document.fonts.check('16px Charsen')));
    const overflow=await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width && r.right>innerWidth+1 && getComputedStyle(e).position!=='fixed';}).slice(0,20).map(e=>({tag:e.tagName,cls:e.className,right:e.getBoundingClientRect().right})));
    if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)){console.log(overflow);await page.screenshot({path:out+'/overflow.png',fullPage:true});}
@@ -29,7 +29,7 @@ const out='preview/home';
     const s=document.querySelector('[data-sequence]'),t=document.querySelector('[data-stage]'),w=document.querySelector('[data-wall-frame]').getBoundingClientRect(),d=document.querySelector('[data-art-slot]').getBoundingClientRect();
     return document.documentElement.dataset.handoff==='mobile'?{start:Number(s.dataset.mobileStart),end:Number(s.dataset.mobileEnd)}:{start:0,end:s.offsetHeight-t.offsetHeight};
    });
-   for(const progress of [.12,.5,.999,1.002]){
+   for(const progress of mode==='off'?[]:[.12,.5,.999,1.002]){
     await page.evaluate(y=>scrollTo(0,y),positions.start+(positions.end-positions.start)*progress);await page.waitForTimeout(100);
     if(progress===.5)await page.screenshot({path:`${out}/flight-${width}.png`});
     if(progress===.999){

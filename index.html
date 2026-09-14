@@ -979,10 +979,26 @@ main [id],section[id]{scroll-margin-top:6.5rem}
   var flyer = $('[data-travelling-art]'), hero = $('.opening'), details = $('.anatomy');
   var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   var desktop = window.matchMedia('(min-width: 901px) and (min-height: 680px)');
-  var geometry = null, scheduled = false, imagesReady = false, mobileLanded = false;
+  var geometry = null, scheduled = false, imagesReady = false;
   var progressRange = function (p,a,b) { return clamp((p-a)/(b-a),0,1); };
   var smooth = function (t) { return t*t*(3-2*t); };
   var figure = $('.anatomy__figure'), specs = $$('.spec',figure);
+  // Move the original content, rather than duplicate it; restore it on desktop.
+  var mobileMaterials=document.createElement('section');
+  mobileMaterials.className='mobile-materials';mobileMaterials.hidden=true;
+  mobileMaterials.setAttribute('aria-label','Artwork craftsmanship');
+  mobileMaterials.innerHTML='<div class="container"><div class="mobile-material-details"><h2>What you&#8217;ll receive</h2></div></div>';
+  sequence.after(mobileMaterials);
+  var mobileContent=[$('.hero-truth'),...$$('.anatomy__col',figure)].map(function(node){
+    var marker=document.createComment('Original desktop content position');node.before(marker);return {node:node,marker:marker};
+  });
+  function layoutMobileMaterials(){
+    var small=innerWidth<=900;mobileMaterials.hidden=!small;
+    mobileContent.forEach(function(item,i){
+      if(small){var target=i===0?$('.container',mobileMaterials):$('.mobile-material-details',mobileMaterials);if(item.node.parentNode!==target){if(i===0)target.prepend(item.node);else target.append(item.node);}}
+      else if(item.node.previousSibling!==item.marker)item.marker.after(item.node);
+    });
+  }
   var svgNS = 'http://www.w3.org/2000/svg';
   var connectors = document.createElementNS(svgNS,'svg');
   connectors.classList.add('anatomy__connectors');
@@ -1014,12 +1030,13 @@ main [id],section[id]{scroll-margin-top:6.5rem}
     });
   }
   function measureJourney() {
+    layoutMobileMaterials();
     // Reserve the actual copy height, including wrapped buttons and enlarged text.
     if(innerWidth<=900){
       var available=innerHeight-76-$('.hero-copy').getBoundingClientRect().height-24;
       hero.style.setProperty('--mobile-room-height',Math.max(180,Math.min(innerWidth*1.04,available))+'px');
     }else hero.style.removeProperty('--mobile-room-height');
-    var enabled = imagesReady && (desktop.matches || innerWidth<=900) && !motion.matches;
+    var enabled = imagesReady && (desktop.matches || (innerWidth<=900 && innerHeight>=520 && $('.hero-copy').getBoundingClientRect().height+280<=innerHeight)) && !motion.matches;
     var mobile = enabled && !desktop.matches;
     document.documentElement.dataset.handoff = enabled ? (mobile?'mobile':'on') : 'off';
     document.documentElement.removeAttribute('data-flying');
@@ -1040,15 +1057,12 @@ main [id],section[id]{scroll-margin-top:6.5rem}
       hero.inert=false;details.inert=false;
       hero.removeAttribute('aria-hidden');details.removeAttribute('aria-hidden');
       stage.removeAttribute('style');
-      var mw=wall.getBoundingClientRect(), md=$('.framed-art',destination).getBoundingClientRect();
-      var safeTop=$('.site-header').getBoundingClientRect().bottom+24;
-      var landingTop=Math.max(safeTop+48,(innerHeight-md.height)/2);
-      var mobileEnd=md.top+scrollY-landingTop;
-      var mobileStart=Math.max(1,Math.min($('.hero-panel').getBoundingClientRect().bottom+scrollY-safeTop,mobileEnd-240));
-      geometry={mobile:true,x:mw.left,y:mw.top+scrollY,w:mw.width,dx:md.left,dy:md.top+scrollY,scale:md.width/mw.width,
-        start:mobileStart,end:mobileEnd,safeTop:safeTop,reset:Math.max(0,mw.bottom+scrollY-safeTop)};
-      sequence.dataset.mobileStart=String(mobileStart);
-      sequence.dataset.mobileEnd=String(mobileEnd);
+      var sr=stage.getBoundingClientRect(),mw=wall.getBoundingClientRect(),md=$('.framed-art',destination).getBoundingClientRect();
+      var duration=sequence.offsetHeight-stage.offsetHeight,origin=sequence.getBoundingClientRect().top+scrollY;
+      geometry={mobile:true,x:mw.left-sr.left,y:mw.top-sr.top,w:mw.width,dx:md.left-sr.left,dy:md.top-sr.top,scale:md.width/mw.width,
+        origin:origin,duration:duration,start:origin+duration*.04,end:origin+duration*.72};
+      sequence.dataset.mobileStart=String(geometry.start);
+      sequence.dataset.mobileEnd=String(geometry.end);
       flyer.style.width=geometry.w+'px';
       drawJourney();measureConnectors();return;
     }
@@ -1066,21 +1080,20 @@ main [id],section[id]{scroll-margin-top:6.5rem}
     scheduled = false; stuck();
     if (!geometry) return;
     if(geometry.mobile){
-      // Once it arrives, ordinary reverse scrolling must keep the real artwork
-      // in section 2. Replay only after the original hero artwork returns.
-      if(scrollY<=geometry.reset)mobileLanded=false;
-      if(scrollY>=geometry.end)mobileLanded=true;
-      var mp=progressRange(scrollY,geometry.start,geometry.end);
-      var active=!mobileLanded && scrollY>geometry.start && scrollY<geometry.end;
-      var mx=geometry.x+(geometry.dx-geometry.x)*smooth(mp);
-      var my=geometry.safeTop+(geometry.dy-geometry.end-geometry.safeTop)*smooth(mp);
-      var ms=1+(geometry.scale-1)*smooth(mp);
+      var mp=progressRange(scrollY,geometry.start,geometry.end),travel=smooth(mp);
+      var mx=geometry.x+(geometry.dx-geometry.x)*travel;
+      var my=geometry.y+(geometry.dy-geometry.y)*travel;
+      var ms=1+(geometry.scale-1)*travel;
+      var progress=progressRange(scrollY,geometry.origin,geometry.origin+geometry.duration);
       flyer.style.transform='translate3d('+mx+'px,'+my+'px,0) scale('+ms+')';
-      flyer.style.opacity=String(smooth(progressRange(mp,0,.2)));
-      document.documentElement.dataset.flying=String(active);
-      document.documentElement.style.setProperty('--landed',mobileLanded?'visible':'hidden');
-      document.documentElement.style.setProperty('--mobile-labels',mobileLanded?1:smooth(progressRange(mp,.9,1)));
-      document.documentElement.style.setProperty('--mobile-truth',active?1-smooth(progressRange(mp,0,.2)):1);
+      flyer.style.visibility=mp<1?'visible':'hidden';
+      document.documentElement.dataset.flying=String(mp>0&&mp<1);
+      document.documentElement.style.setProperty('--landed',mp>=1?'visible':'hidden');
+      stage.style.setProperty('--room-opacity',1-smooth(progressRange(progress,.12,.62)));
+      stage.style.setProperty('--copy-opacity',1-smooth(progressRange(progress,.015,.2)));
+      stage.style.setProperty('--details-opacity',smooth(progressRange(progress,.52,.72)));
+      hero.inert=progress>=.2;details.inert=progress<.52;
+      hero.setAttribute('aria-hidden',String(hero.inert));details.setAttribute('aria-hidden',String(details.inert));
       return;
     }
     var p = clamp(-sequence.getBoundingClientRect().top / (sequence.offsetHeight-stage.offsetHeight),0,1);
