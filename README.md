@@ -1,6 +1,6 @@
 # Aalishaan Studio prototype
 
-**E7 development reference:** the public R13 design with the accepted mobile wall-to-materials lift, streamlined material cards and balanced mobile footer, collection back links above artwork, centred mobile navigation, saved artworks accessible from the menu/cart, and connected Admin A1. [The development handoff](docs/DEVELOPMENT-HANDOFF.md) records the independent review, fixes, validation and remaining owner decisions. [PAGE-TRACKER.md](PAGE-TRACKER.md) records approval separately from technical checks. Payments, tracking, messages and Admin provider actions are demonstrations.
+**E8 development reference:** the final owner-supplied logo in the public header and footer, with the retained E7 design: accepted mobile wall-to-materials lift, streamlined material cards and balanced mobile footer, collection back links above artwork, centred mobile navigation, saved artworks accessible from the menu/cart, and connected Admin A1. [The development handoff](docs/DEVELOPMENT-HANDOFF.md) records the independent review, fixes, validation and remaining owner decisions. [PAGE-TRACKER.md](PAGE-TRACKER.md) records approval separately from technical checks. Payments, tracking, messages and Admin provider actions are demonstrations.
 
 ## Start here
 

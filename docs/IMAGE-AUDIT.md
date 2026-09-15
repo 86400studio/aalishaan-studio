@@ -13,10 +13,10 @@ Updated 14 September 2026 for E1. All images and fonts are under assets/. M1 add
 | assets/size-guides/ | 7 | Size and room-fit guides |
 | assets/product/ | 5 | Lantern product visuals retained by the current prototype |
 | assets/product-references/ | 14 | Materials, framing and packaging visuals |
-| assets/brand/ | 1 | Studio logo |
+| assets/brand/ | 2 | Final supplied Studio PNG logo and retained legacy asset |
 | assets/fonts/ | 2 | Active local font and its supplied licence |
 
-Total: **634 files**. Full-resolution sources and smaller display versions have different jobs; both are retained to preserve zoom quality and normal page loading.
+Total: **635 files**. E8 (15 September 2026) adds the exact owner-supplied 2172 x 724 PNG as assets/brand/aalishaan-studio.png for all public header/footer logos. Full-resolution sources and smaller display versions have different jobs; both are retained to preserve zoom quality and normal page loading.
 
 ## Mapping and preparation
 
