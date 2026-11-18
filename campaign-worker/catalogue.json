@@ -1,0 +1,288 @@
+[
+  {
+    "id": "41-F",
+    "title": "The Bridge of Blue Stone",
+    "slug": "the-bridge-of-blue-stone",
+    "room": "Living Room",
+    "sheet_row": 35,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/1. Collection 6 - Painted in Gold/1. Art Style 1 - Gilded Peaks/Artwork 1 The Bridge of Blue Stone (41-F).png",
+      "close": "Aalishaan/1. Artwork Mockups/1. Collection 6 - Painted in Gold/1. Art Style 1 - Gilded Peaks/41-F-the-bridge-of-blue-stone/the-bridge-of-blue-stone-close-antique-gold.png",
+      "frame": "Aalishaan/1. Artwork Mockups/1. Collection 6 - Painted in Gold/1. Art Style 1 - Gilded Peaks/41-F-the-bridge-of-blue-stone/the-bridge-of-blue-stone-frame-antique-gold.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-living-room-portrait.png"
+    }
+  },
+  {
+    "id": "41-B",
+    "title": "The Moon Between Two Peaks",
+    "slug": "the-moon-between-two-peaks",
+    "room": "Living Room",
+    "sheet_row": 36,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/1. Collection 6 - Painted in Gold/1. Art Style 1 - Gilded Peaks/Artwork 2 The Moon Between Two Peaks (41-B).png",
+      "close": "Aalishaan/1. Artwork Mockups/1. Collection 6 - Painted in Gold/1. Art Style 1 - Gilded Peaks/41-B-the-moon-between-two-peaks/the-moon-between-two-peaks-close-antique-gold.png",
+      "frame": "Aalishaan/1. Artwork Mockups/1. Collection 6 - Painted in Gold/1. Art Style 1 - Gilded Peaks/41-B-the-moon-between-two-peaks/the-moon-between-two-peaks-frame-antique-gold.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-living-room-portrait.png"
+    }
+  },
+  {
+    "id": "42-F",
+    "title": "The Pine That Holds the Moon",
+    "slug": "the-pine-that-holds-the-moon",
+    "room": "Living Room",
+    "sheet_row": 37,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/1. Collection 6 - Painted in Gold/2. Art Style 2 - Rinpa Moon/Artwork 1 The Pine That Holds the Moon (42-F).png",
+      "close": "Aalishaan/1. Artwork Mockups/1. Collection 6 - Painted in Gold/2. Art Style 2 - Rinpa Moon/42-F-the-pine-that-holds-the-moon/the-pine-that-holds-the-moon-close-antique-gold.png",
+      "frame": "Aalishaan/1. Artwork Mockups/1. Collection 6 - Painted in Gold/2. Art Style 2 - Rinpa Moon/42-F-the-pine-that-holds-the-moon/the-pine-that-holds-the-moon-frame-antique-gold.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-living-room-portrait.png"
+    }
+  },
+  {
+    "id": "42-B",
+    "title": "Willow After Rain",
+    "slug": "willow-after-rain",
+    "room": "Living Room",
+    "sheet_row": 38,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/1. Collection 6 - Painted in Gold/2. Art Style 2 - Rinpa Moon/Artwork 2 Willow After Rain (42-B).png",
+      "close": "Aalishaan/1. Artwork Mockups/1. Collection 6 - Painted in Gold/2. Art Style 2 - Rinpa Moon/42-B-willow-after-rain/willow-after-rain-close-antique-gold.png",
+      "frame": "Aalishaan/1. Artwork Mockups/1. Collection 6 - Painted in Gold/2. Art Style 2 - Rinpa Moon/42-B-willow-after-rain/willow-after-rain-frame-antique-gold.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-living-room-portrait.png"
+    }
+  },
+  {
+    "id": "38-F",
+    "title": "Bamboo After the Storm",
+    "slug": "bamboo-after-the-storm",
+    "room": "Bedroom",
+    "sheet_row": 39,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/2. Collection 7 - Blossoms in Ink/1. Art Style 1 - Four Gentlemen/Artwork 1 Bamboo After the Storm (38-F).png",
+      "close": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/1. Art Style 1 - Four Gentlemen/38-F-bamboo-after-the-storm/bamboo-after-the-storm-close-white.png",
+      "frame": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/1. Art Style 1 - Four Gentlemen/38-F-bamboo-after-the-storm/bamboo-after-the-storm-frame-white.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-bedroom-portrait.png"
+    }
+  },
+  {
+    "id": "38-B",
+    "title": "The Cup Beneath the Plum",
+    "slug": "the-cup-beneath-the-plum",
+    "room": "Bedroom",
+    "sheet_row": 40,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/2. Collection 7 - Blossoms in Ink/1. Art Style 1 - Four Gentlemen/Artwork 2 The Cup Beneath the Plum (38-B).png",
+      "close": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/1. Art Style 1 - Four Gentlemen/38-B-the-cup-beneath-the-plum/the-cup-beneath-the-plum-close-white.png",
+      "frame": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/1. Art Style 1 - Four Gentlemen/38-B-the-cup-beneath-the-plum/the-cup-beneath-the-plum-frame-white.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-bedroom-portrait.png"
+    }
+  },
+  {
+    "id": "39-F",
+    "title": "The Blossom Over the Closed Window",
+    "slug": "the-blossom-over-the-closed-window",
+    "room": "Bedroom",
+    "sheet_row": 41,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/2. Collection 7 - Blossoms in Ink/2. Art Style 2 - Scarlet Blossom/Artwork 1 The Blossom Over the Closed Window (39-F).png",
+      "close": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/2. Art Style 2 - Scarlet Blossom/39-F-the-blossom-over-the-closed-window/the-blossom-over-the-closed-window-close-white.png",
+      "frame": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/2. Art Style 2 - Scarlet Blossom/39-F-the-blossom-over-the-closed-window/the-blossom-over-the-closed-window-frame-white.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-bedroom-portrait.png"
+    }
+  },
+  {
+    "id": "39-B",
+    "title": "The First Warm Wall",
+    "slug": "the-first-warm-wall",
+    "room": "Bedroom",
+    "sheet_row": 42,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/2. Collection 7 - Blossoms in Ink/2. Art Style 2 - Scarlet Blossom/Artwork 2 The First Warm Wall (39-B).png",
+      "close": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/2. Art Style 2 - Scarlet Blossom/39-B-the-first-warm-wall/the-first-warm-wall-close-white.png",
+      "frame": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/2. Art Style 2 - Scarlet Blossom/39-B-the-first-warm-wall/the-first-warm-wall-frame-white.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-bedroom-portrait.png"
+    }
+  },
+  {
+    "id": "40-F",
+    "title": "The Branch Above Dark Water",
+    "slug": "the-branch-above-dark-water",
+    "room": "Bedroom",
+    "sheet_row": 43,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/2. Collection 7 - Blossoms in Ink/3. Art Style 3 - Moonlit Blossom/Artwork 1 The Branch Above Dark Water (40-F).png",
+      "close": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/3. Art Style 3 - Moonlit Blossom/40-F-the-branch-above-dark-water/the-branch-above-dark-water-close-white.png",
+      "frame": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/3. Art Style 3 - Moonlit Blossom/40-F-the-branch-above-dark-water/the-branch-above-dark-water-frame-white.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-bedroom-portrait.png"
+    }
+  },
+  {
+    "id": "40-B",
+    "title": "The Window After Midnight",
+    "slug": "the-window-after-midnight",
+    "room": "Bedroom",
+    "sheet_row": 44,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/2. Collection 7 - Blossoms in Ink/3. Art Style 3 - Moonlit Blossom/Artwork 2 The Window After Midnight (40-B).png",
+      "close": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/3. Art Style 3 - Moonlit Blossom/40-B-the-window-after-midnight/the-window-after-midnight-close-white.png",
+      "frame": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/3. Art Style 3 - Moonlit Blossom/40-B-the-window-after-midnight/the-window-after-midnight-frame-white.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-bedroom-portrait.png"
+    }
+  },
+  {
+    "id": "29-F",
+    "title": "The Teahouse Shutters at Spring Dawn",
+    "slug": "the-teahouse-shutters-at-spring-dawn",
+    "room": "Dining Room",
+    "sheet_row": 45,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/2. Collection 7 - Blossoms in Ink/4. Art Style 4 - Hand-Printed Ukiyo-e/Artwork 1 The Teahouse Shutters at Spring Dawn.png",
+      "close": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/4. Art Style 4 - Hand-Printed Ukiyo-e/29-F-the-teahouse-shutters-at-spring-dawn/the-teahouse-shutters-at-spring-dawn-close-white.png",
+      "frame": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/4. Art Style 4 - Hand-Printed Ukiyo-e/29-F-the-teahouse-shutters-at-spring-dawn/the-teahouse-shutters-at-spring-dawn-frame-white.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-dining-room-landscape.png"
+    }
+  },
+  {
+    "id": "29-B",
+    "title": "The Bridge Under Falling Blossom",
+    "slug": "the-bridge-under-falling-blossom",
+    "room": "Bedroom",
+    "sheet_row": 46,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/2. Collection 7 - Blossoms in Ink/4. Art Style 4 - Hand-Printed Ukiyo-e/Artwork 2 The Bridge Under Falling Blossom (29-B).png",
+      "close": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/4. Art Style 4 - Hand-Printed Ukiyo-e/29-B-the-bridge-under-falling-blossom/the-bridge-under-falling-blossom-close-white.png",
+      "frame": "Aalishaan/1. Artwork Mockups/2. Collection 7 - Blossoms in Ink/4. Art Style 4 - Hand-Printed Ukiyo-e/29-B-the-bridge-under-falling-blossom/the-bridge-under-falling-blossom-frame-white.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-bedroom-landscape.png"
+    }
+  },
+  {
+    "id": "13-F",
+    "title": "The Harbour Chain Opens",
+    "slug": "the-harbour-chain-opens",
+    "room": "Study & Office",
+    "sheet_row": 61,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/3. Collection 9 - The Age of Sail/1. Art Style 1 - Mythic Voyage/Artwork 1 The Harbour Chain Opens (13-F).png",
+      "close": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/1. Art Style 1 - Mythic Voyage/13-F-the-harbour-chain-opens/the-harbour-chain-opens-close-antique-gold.png",
+      "frame": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/1. Art Style 1 - Mythic Voyage/13-F-the-harbour-chain-opens/the-harbour-chain-opens-frame-antique-gold.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-study-office-landscape.png"
+    }
+  },
+  {
+    "id": "13-B",
+    "title": "The Galley Beyond the Breakwater",
+    "slug": "the-galley-beyond-the-breakwater",
+    "room": "Study & Office",
+    "sheet_row": 62,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/3. Collection 9 - The Age of Sail/1. Art Style 1 - Mythic Voyage/Artwork 2 The Galley Beyond the Breakwater (13-B).png",
+      "close": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/1. Art Style 1 - Mythic Voyage/13-B-the-galley-beyond-the-breakwater/the-galley-beyond-the-breakwater-close-antique-gold.png",
+      "frame": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/1. Art Style 1 - Mythic Voyage/13-B-the-galley-beyond-the-breakwater/the-galley-beyond-the-breakwater-frame-antique-gold.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-study-office-landscape.png"
+    }
+  },
+  {
+    "id": "14-F",
+    "title": "The Lantern That Outlasted the Gale",
+    "slug": "the-lantern-that-outlasted-the-gale",
+    "room": "Study & Office",
+    "sheet_row": 63,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/3. Collection 9 - The Age of Sail/2. Art Style 2 - Corsair Chronicles/Artwork 1 The Lantern That Outlasted the Gale (14-F.png",
+      "close": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/2. Art Style 2 - Corsair Chronicles/14-F-the-lantern-that-outlasted-the-gale/the-lantern-that-outlasted-the-gale-close-black.png",
+      "frame": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/2. Art Style 2 - Corsair Chronicles/14-F-the-lantern-that-outlasted-the-gale/the-lantern-that-outlasted-the-gale-frame-black.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-study-office-landscape.png"
+    }
+  },
+  {
+    "id": "14-B",
+    "title": "The Ship Between Two Storms",
+    "slug": "the-ship-between-two-storms",
+    "room": "Study & Office",
+    "sheet_row": 64,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/3. Collection 9 - The Age of Sail/2. Art Style 2 - Corsair Chronicles/Artwork 2 The Ship Between Two Storms (14-B).png",
+      "close": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/2. Art Style 2 - Corsair Chronicles/14-B-the-ship-between-two-storms/the-ship-between-two-storms-close-black.png",
+      "frame": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/2. Art Style 2 - Corsair Chronicles/14-B-the-ship-between-two-storms/the-ship-between-two-storms-frame-black.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-study-office-landscape.png"
+    }
+  },
+  {
+    "id": "15-F",
+    "title": "The Last Mooring in the Mist",
+    "slug": "the-last-mooring-in-the-mist",
+    "room": "Study & Office",
+    "sheet_row": 65,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/3. Collection 9 - The Age of Sail/3. Art Style 3 - Ghostly Armada/Artwork 1 The Last Mooring in the Mist (15-F).png",
+      "close": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/3. Art Style 3 - Ghostly Armada/15-F-the-last-mooring-in-the-mist/the-last-mooring-in-the-mist-close-black.png",
+      "frame": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/3. Art Style 3 - Ghostly Armada/15-F-the-last-mooring-in-the-mist/the-last-mooring-in-the-mist-frame-black.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-study-office-landscape.png"
+    }
+  },
+  {
+    "id": "15-B",
+    "title": "The Ship Behind the Fog Bell",
+    "slug": "the-ship-behind-the-fog-bell",
+    "room": "Study & Office",
+    "sheet_row": 66,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/3. Collection 9 - The Age of Sail/3. Art Style 3 - Ghostly Armada/Artwork 2 The Ship Behind the Fog Bell (15-B).png",
+      "close": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/3. Art Style 3 - Ghostly Armada/15-B-the-ship-behind-the-fog-bell/the-ship-behind-the-fog-bell-close-black.png",
+      "frame": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/3. Art Style 3 - Ghostly Armada/15-B-the-ship-behind-the-fog-bell/the-ship-behind-the-fog-bell-frame-black.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-study-office-landscape.png"
+    }
+  },
+  {
+    "id": "44-F",
+    "title": "The Shipyard at Low Tide",
+    "slug": "the-shipyard-at-low-tide",
+    "room": "Study & Office",
+    "sheet_row": 67,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/3. Collection 9 - The Age of Sail/4. Art Style 4 - Marquetry Voyage/Artwork 1 The Shipyard at Low Tide (44-F).png",
+      "close": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/4. Art Style 4 - Marquetry Voyage/44-F-the-shipyard-at-low-tide/the-shipyard-at-low-tide-close-black.png",
+      "frame": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/4. Art Style 4 - Marquetry Voyage/44-F-the-shipyard-at-low-tide/the-shipyard-at-low-tide-frame-black.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-study-office-landscape.png"
+    }
+  },
+  {
+    "id": "44-B",
+    "title": "The Clipper in a Grain-Wind",
+    "slug": "the-clipper-in-a-grain-wind",
+    "room": "Study & Office",
+    "sheet_row": 68,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/3. Collection 9 - The Age of Sail/4. Art Style 4 - Marquetry Voyage/Artwork 2 The Clipper in a Grain-Wind (44-B).png",
+      "close": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/4. Art Style 4 - Marquetry Voyage/44-B-the-clipper-in-a-grain-wind/the-clipper-in-a-grain-wind-close-black.png",
+      "frame": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/4. Art Style 4 - Marquetry Voyage/44-B-the-clipper-in-a-grain-wind/the-clipper-in-a-grain-wind-frame-black.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-study-office-landscape.png"
+    }
+  },
+  {
+    "id": "09-F",
+    "title": "The Copper Citadel at the Sea Gate",
+    "slug": "the-copper-citadel-at-the-sea-gate",
+    "room": "Study & Office",
+    "sheet_row": 69,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/3. Collection 9 - The Age of Sail/5. Art Style 5 - Neo-Classical Fantasy/Artwork 1 The Copper Citadel at the Sea Gate (09-F).png",
+      "close": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/5. Art Style 5 - Neo-Classical Fantasy/09-F-the-copper-citadel-at-the-sea-gate/the-copper-citadel-at-the-sea-gate-close-antique-gold.png",
+      "frame": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/5. Art Style 5 - Neo-Classical Fantasy/09-F-the-copper-citadel-at-the-sea-gate/the-copper-citadel-at-the-sea-gate-frame-antique-gold.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-study-office-portrait.png"
+    }
+  },
+  {
+    "id": "09-B",
+    "title": "The Palace Above the Dry Dock",
+    "slug": "the-palace-above-the-dry-dock",
+    "room": "Study & Office",
+    "sheet_row": 70,
+    "assets": {
+      "art": "Aalishaan/0. Artworks/3. Collection 9 - The Age of Sail/5. Art Style 5 - Neo-Classical Fantasy/Artwork 2 The Palace Above the Dry Dock (09-B).png",
+      "close": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/5. Art Style 5 - Neo-Classical Fantasy/09-B-the-palace-above-the-dry-dock/the-palace-above-the-dry-dock-close-antique-gold.png",
+      "frame": "Aalishaan/1. Artwork Mockups/3. Collection 9 - The Age of Sail/5. Art Style 5 - Neo-Classical Fantasy/09-B-the-palace-above-the-dry-dock/the-palace-above-the-dry-dock-frame-antique-gold.png",
+      "guide": "Aalishaan/1. Artwork Mockups/Size Guides/sizeguide-study-office-portrait.png"
+    }
+  }
+]

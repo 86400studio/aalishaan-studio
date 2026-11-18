@@ -1,7 +1,7 @@
 // The complete, portable source handoff; generated releases and local tools stay out.
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const include=['.github','.gitattributes','.gitignore','.nojekyll','AGENTS.md','README.md','PAGE-TRACKER.md','package.json','package-lock.json','site-manifest.json','site-map.html','index.html','admin','assets','data','docs','pages','product','scripts','shared','shop-all'];
+const include=['.github','.gitattributes','.gitignore','.nojekyll','AGENTS.md','README.md','PAGE-TRACKER.md','package.json','package-lock.json','site-manifest.json','site-map.html','index.html','admin','assets','campaign-worker','prelaunch','data','docs','pages','product','scripts','shared','shop-all'];
 function sourceFiles(){
  const files=[];
  function walk(relative){
