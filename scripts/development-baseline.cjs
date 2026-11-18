@@ -5,7 +5,7 @@ const target='data/development-baseline.json',freeze=process.argv.includes('--fr
 const hash=file=>{
  let data=fs.readFileSync(path.join(root,file));
  // Git may change text line endings on checkout. Text content remains identical.
- if(/\.(?:html|css|js|cjs|json|md|yml|yaml|ps1|txt)$/.test(file)||/^\.[^/]+$/.test(file))data=Buffer.from(data.toString('utf8').replace(/\r\n/g,'\n'));
+ if(/\.(?:html|css|js|cjs|mjs|json|md|yml|yaml|ps1|txt|csv|sql|toml)$/.test(file)||/^\.[^/]+$/.test(file))data=Buffer.from(data.toString('utf8').replace(/\r\n/g,'\n'));
  return crypto.createHash('sha256').update(data).digest('hex');
 };
 const files=sourceFiles().filter(f=>f!==target),hashes=Object.fromEntries(files.map(f=>[f,hash(f)]));

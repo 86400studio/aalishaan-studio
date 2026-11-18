@@ -1,0 +1,10 @@
+name = "aalishaan-prelaunch"
+main = "src.js"
+compatibility_date = "2026-01-01"
+[vars]
+PUBLIC_ORIGIN = "https://86400studio.github.io"
+[[d1_databases]]
+binding = "DB"
+database_name = "aalishaan-prelaunch"
+database_id = "a0422a22-ada9-48cf-9f8b-2714e46ead71"
+migrations_dir = "migrations"

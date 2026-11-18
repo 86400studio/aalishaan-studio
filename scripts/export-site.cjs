@@ -11,7 +11,7 @@ if(fs.existsSync(out)){
  fs.rmSync(out,{recursive:true});
 }
 fs.mkdirSync(out,{recursive:true});
-for(const file of ['index.html','site-map.html','.nojekyll','assets','shared','pages','product','shop-all','admin','docs/ADMIN-FINAL-FEATURES.md']){
+for(const file of ['index.html','site-map.html','.nojekyll','assets','shared','pages','product','shop-all','admin','prelaunch','docs/ADMIN-FINAL-FEATURES.md']){
  const dest=path.join(out,file);fs.mkdirSync(path.dirname(dest),{recursive:true});
  fs.cpSync(path.join(root,file),dest,{recursive:true,filter:source=>file!=='admin'||path.basename(source)!=='README.md'});
 }
